@@ -19,9 +19,9 @@
 -include device/oppo/msm8974-common/BoardConfigCommon.mk
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := console=tty0 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
 TARGET_KERNEL_CONFIG := lineageos_bacon_defconfig
-TARGET_KERNEL_SOURCE := kernel/oppo/msm8974
+TARGET_KERNEL_SOURCE := kernel/oneplus/msm8974
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := bacon,A0001
@@ -45,6 +45,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 1388314624
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 13271448576
 BOARD_USERDATAEXTRAIMAGE_PARTITION_SIZE := 59914792960
 BOARD_USERDATAEXTRAIMAGE_PARTITION_NAME := 64G
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Init
 TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/oneplus/bacon/init/init_bacon.cpp
