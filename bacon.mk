@@ -62,7 +62,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/init_hcismd_up.sh:system/etc/init_hcismd_up.sh \
     $(LOCAL_PATH)/ubuntu/device-hacks.conf:system/halium/etc/init/device-hacks.conf \
     $(LOCAL_PATH)/ubuntu/usensord.conf:system/halium/usr/share/upstart/sessions/usensord.conf \
-    $(LOCAL_PATH)/ubuntu/touch.pa:system/halium/etc/pulse/touch.pa
+    $(LOCAL_PATH)/ubuntu/config-default.xml:system/halium/usr/share/repowerd/config-default.xml \
+    $(LOCAL_PATH)/ubuntu/biometryd.conf:system/halium/etc/init/biometryd.conf
 
 # Additional Android stuff for Ubuntu Touch
 PRODUCT_PACKAGES += \
