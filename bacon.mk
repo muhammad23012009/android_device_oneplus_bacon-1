@@ -54,6 +54,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
 
+# for off charging mode
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 # Ubuntu Touch specific vars.
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/ofono.override:system/halium/etc/init/ofono.override \
@@ -63,7 +67,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/device-hacks.conf:system/halium/etc/init/device-hacks.conf \
     $(LOCAL_PATH)/ubuntu/usensord.conf:system/halium/usr/share/upstart/sessions/usensord.conf \
     $(LOCAL_PATH)/ubuntu/config-default.xml:system/halium/usr/share/repowerd/config-default.xml \
-    $(LOCAL_PATH)/ubuntu/biometryd.conf:system/halium/etc/init/biometryd.conf
+    $(LOCAL_PATH)/ubuntu/biometryd.conf:system/halium/etc/init/biometryd.conf \
+    $(LOCAL_PATH)/ubuntu/bluebinder.conf:system/halium/etc/init/bluebinder.conf \
+    $(LOCAL_PATH)/ubuntu/repowerd.conf:system/halium/etc/init/repowerd.conf \
+    $(LOCAL_PATH)/ubuntu/ril_subscription.conf:system/halium/etc/ofono/ril_subscription.conf
 
 # Additional Android stuff for Ubuntu Touch
 PRODUCT_PACKAGES += \
@@ -71,7 +78,9 @@ PRODUCT_PACKAGES += \
     minimediaservice \
     libaudioflingerglue \
     libminisf \
-    miniafservice
+    miniafservice \
+    libhfd_api \
+    libtime_genoff
 
 # Disable fake sensor service
 MINIMEDIA_SENSORSERVER_DISABLE := 1
