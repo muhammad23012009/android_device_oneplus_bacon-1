@@ -91,7 +91,6 @@ endif
 # GPS
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
->>>>>>> db11f8f ([Ubuntu Touch] add charger images to have same charge animation as FP2)
 
 # Init
 TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/oneplus/bacon/init/init_bacon.cpp
