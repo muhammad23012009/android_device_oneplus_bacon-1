@@ -30,14 +30,3 @@ lxc.mount.entry = /firmware firmware bind rbind,optional 0 0
 lxc.mount.entry = /odm odm bind bind,optional 0 0
 lxc.mount.entry = /mnt mnt bind rbind 0 0
 lxc.mount.entry = /apex apex bind bind,optional 0 0
-/android/plat_file_contexts plat_file_contexts bind bind,optional 0 0
-/android/plat_hwservice_contexts plat_hwservice_contexts bind bind,optional 0 0
-/android/plat_property_contexts plat_property_contexts bind bind,optional 0 0
-/android/plat_seapp_contexts plat_seapp_contexts bind bind,optional 0 0
-/android/plat_service_contexts plat_service_contexts bind bind,optional 0 0
-/android/vendor_file_contexts vendor_file_contexts bind bind,optional 0 0
-/android/vendor_hwservice_contexts vendor_hwservice_contexts bind bind,optional 0 0
-/android/vendor_property_contexts vendor_property_contexts bind bind,optional 0 0
-/android/vendor_seapp_contexts vendor_seapp_contexts bind bind,optional 0 0
-/android/vendor_service_contexts vendor_service_contexts bind bind,optional 0 0
-/android/vndservice_contexts vndservice_contexts bind bind,optional 0 0
