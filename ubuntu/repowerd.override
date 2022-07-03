@@ -1,3 +1,7 @@
+start on started dbus and android
+
+respawn
+
 # Android lights HAL is present, but does not work correctly with repowerd
 env REPOWERD_BACKLIGHT_BACKEND=sysfs
 
@@ -24,3 +28,4 @@ post-start script
     umount -l /system/lib/libubuntu_application_api.so
 end script
 
+exec /usr/sbin/repowerd
