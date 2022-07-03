@@ -70,7 +70,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/bluebinder.conf:system/halium/etc/init/bluebinder.conf \
     $(LOCAL_PATH)/ubuntu/ril_subscription.conf:system/halium/etc/ofono/ril_subscription.conf \
     $(LOCAL_PATH)/ubuntu/lxc-config:system/halium/var/lib/lxc/android/config \
-    $(LOCAL_PATH)/ubuntu/repowerd.override:system/halium/etc/init/repowerd.override
+    $(LOCAL_PATH)/ubuntu/repowerd.override:system/halium/etc/init/repowerd.conf
 
 # Additional Android stuff for Ubuntu Touch
 PRODUCT_PACKAGES += \
