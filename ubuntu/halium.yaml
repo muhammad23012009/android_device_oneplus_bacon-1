@@ -1,0 +1,17 @@
+default:
+  Vendor: OnePlus
+  PrettyName: OnePlus One
+  DeviceType: phone
+  GridUnit: 21
+  SupportedOrientations:
+    - Portrait
+    - Landscape
+    - InvertedLandscape
+  DoubleTapToWake:
+    - /proc/touchpanel/double_tap_enable|1|0
+  MirAndroidPlatformClientEglFlush:
+    - all
+  MirAndroidPlatformServerEglSync:
+    - false
+  MirAndroidPlatformServerPartialUpdates:
+    - true

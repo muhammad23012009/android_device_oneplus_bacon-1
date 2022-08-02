@@ -32,7 +32,10 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8974
+    camera.msm8974 \
+    libqomx_core \
+    libmmcamera_interface \
+    libcameradepthcalibrator
 
 # Display
 PRODUCT_AAPT_CONFIG := normal
@@ -70,7 +73,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/bluebinder.conf:system/halium/etc/init/bluebinder.conf \
     $(LOCAL_PATH)/ubuntu/ril_subscription.conf:system/halium/etc/ofono/ril_subscription.conf \
     $(LOCAL_PATH)/ubuntu/lxc-config:system/halium/var/lib/lxc/android/config \
-    $(LOCAL_PATH)/ubuntu/repowerd.override:system/halium/etc/init/repowerd.conf
+    $(LOCAL_PATH)/ubuntu/repowerd.override:system/halium/etc/init/repowerd.conf \
+    $(LOCAL_PATH)/ubuntu/halium.yaml:system/halium/etc/deviceinfo/devices/halium.yaml
 
 # Additional Android stuff for Ubuntu Touch
 PRODUCT_PACKAGES += \
@@ -101,7 +105,8 @@ PRODUCT_PACKAGES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2016-09-01
+    ro.lineage.build.vendor_security_patch=2016-09-01 \
+    ro.secure=0
 
 # Call the proprietary setup
 $(call inherit-product, vendor/oneplus/bacon/bacon-vendor.mk)
