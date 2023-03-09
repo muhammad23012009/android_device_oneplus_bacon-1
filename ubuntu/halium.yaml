@@ -1,5 +1,9 @@
-default:
-  Vendor: OnePlus
+A0001:
+  Names:
+    - A0001
+    - bacon
+    - OnePlus One
+
   PrettyName: OnePlus One
   DeviceType: phone
   GridUnit: 21
@@ -10,8 +14,11 @@ default:
   DoubleTapToWake:
     - /proc/touchpanel/double_tap_enable|1|0
   MirAndroidPlatformClientEglFlush:
-    - all
+    - "!/usr/bin/lomiri,all"
   MirAndroidPlatformServerEglSync:
     - false
   MirAndroidPlatformServerPartialUpdates:
     - true
+  LomiriInteractiveBlur:
+    - true
+
