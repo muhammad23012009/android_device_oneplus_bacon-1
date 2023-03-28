@@ -64,16 +64,11 @@ PRODUCT_PACKAGES += \
 # Ubuntu Touch specific vars.
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/70-android.rules:system/halium/lib/udev/rules.d/70-android.rules \
-    $(LOCAL_PATH)/ubuntu/display.conf:system/halium/etc/ubuntu-touch-session.d/android.conf \
     $(LOCAL_PATH)/ubuntu/init_hcismd_up.sh:system/etc/init_hcismd_up.sh \
-    $(LOCAL_PATH)/ubuntu/device-hacks.conf:system/halium/etc/init/device-hacks.conf \
-    $(LOCAL_PATH)/ubuntu/usensord.conf:system/halium/usr/share/upstart/sessions/usensord.conf \
     $(LOCAL_PATH)/ubuntu/config-default.xml:system/halium/usr/share/repowerd/config-default.xml \
-    $(LOCAL_PATH)/ubuntu/biometryd.conf:system/halium/etc/init/biometryd.conf \
-    $(LOCAL_PATH)/ubuntu/bluebinder.conf:system/halium/etc/init/bluebinder.conf \
     $(LOCAL_PATH)/ubuntu/ril_subscription.conf:system/halium/etc/ofono/ril_subscription.conf \
     $(LOCAL_PATH)/ubuntu/lxc-config:system/halium/var/lib/lxc/android/config \
-    $(LOCAL_PATH)/ubuntu/repowerd.override:system/halium/etc/init/repowerd.conf \
+    $(LOCAL_PATH)/ubuntu/usb-moded.conf:system/halium/etc/default/usb-moded.d/device-specific-config.conf \
     $(LOCAL_PATH)/ubuntu/halium.yaml:system/halium/etc/deviceinfo/devices/halium.yaml
 
 # Additional Android stuff for Ubuntu Touch
@@ -93,7 +88,8 @@ MINIMEDIA_SENSORSERVER_DISABLE := 1
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.t-o.quirk.forcesink=sink.primary \
     ro.t-o.quirk.forcesource=source.primary \
-    ro.ubuntu.camera_plugin=aal
+    ro.ubuntu.camera_plugin=aal \
+    ubuntu.widi.supported=1
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -102,11 +98,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.bacon.rc \
     ueventd.bacon.rc
-
-# Vendor security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2016-09-01 \
-    ro.secure=0
 
 # Call the proprietary setup
 $(call inherit-product, vendor/oneplus/bacon/bacon-vendor.mk)
