@@ -1,1 +1,5 @@
 type reserve4_block_device, dev_type;
+
+# Ubuntu Touch
+type ubports-mounter_file, file_type;
+

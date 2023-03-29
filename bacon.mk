@@ -69,7 +69,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/ril_subscription.conf:system/halium/etc/ofono/ril_subscription.conf \
     $(LOCAL_PATH)/ubuntu/lxc-config:system/halium/var/lib/lxc/android/config \
     $(LOCAL_PATH)/ubuntu/usb-moded.conf:system/halium/etc/default/usb-moded.d/device-specific-config.conf \
-    $(LOCAL_PATH)/ubuntu/halium.yaml:system/halium/etc/deviceinfo/devices/halium.yaml
+    $(LOCAL_PATH)/ubuntu/halium.yaml:system/halium/etc/deviceinfo/devices/halium.yaml \
+    $(LOCAL_PATH)/ubuntu/recovery/ubports-mounter.sh:root/ubports-mounter.sh
 
 # Additional Android stuff for Ubuntu Touch
 PRODUCT_PACKAGES += \
