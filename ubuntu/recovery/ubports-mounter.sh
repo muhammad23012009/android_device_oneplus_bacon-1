@@ -19,11 +19,10 @@ done
 mkdir /data/cache/ > /dev/kmsg
 mkdir /data/cache/recovery/ > /dev/kmsg
 
-while [ "$DATA_MOUNT_CODE" == "0" ]; do
-    if [ ! -d /cache/recovery ]; then
-        mount --bind /data/cache /cache > /dev/kmsg
-    fi
-done
+if [ "$DATA_MOUNT_CODE" == "0" ]; then
+    mkdir /data/cache > /dev/kmsg
+    mount -o bind /data/cache /cache > /dev/kmsg
+fi
 
 setprop halium.datamount.done 1
 exit 0
