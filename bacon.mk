@@ -90,6 +90,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.t-o.quirk.forcesink=sink.primary \
     ro.t-o.quirk.forcesource=source.primary \
     ro.ubuntu.camera_plugin=aal \
+    ro.halium.quirks.system-in-data=1 \
     ubuntu.widi.supported=1
 
 # Ramdisk
