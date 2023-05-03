@@ -4,7 +4,7 @@ DATA_MOUNT_CODE=1
 
 RETRY_COUNTER=0
 while [ "$DATA_MOUNT_CODE" != "0" ]; do
-    if [ "$RETRY_COUNTER" -gt "3" ]; then
+    if [ "$RETRY_COUNTER" -gt "6" ]; then
         echo "setup_fake_cache.sh - reached maximum number of retries" > /dev/kmsg
 
         setprop halium.datamount.done 1
