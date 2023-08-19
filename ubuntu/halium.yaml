@@ -22,3 +22,4 @@ A0001:
   LomiriInteractiveBlur:
     - true
 
+  FlashlightSysfsPath: /sys/class/leds/torch-light/brightness

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Setup permission for flashlight node
+chown system:android_input /sys/class/leds/torch-light/brightness
+chmod 666 /sys/class/leds/torch-light/brightness
